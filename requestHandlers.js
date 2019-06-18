@@ -1,5 +1,13 @@
 function start() {
   console.log("Request handler 'start' was called");
+
+  function sleep(ms) {
+    let startTime = new Date().getTime();
+    while (new Date().getTime() < startTime + ms);
+  }
+
+  sleep(10000);
+
   return 'Hello Start';
 }
 
