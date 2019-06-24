@@ -1,5 +1,5 @@
 let server = require('./server');
-let router = require('./router')
+let router = require('./router');
 let requestHandlers = require('./requestHandlers');
 
 let handle = {};

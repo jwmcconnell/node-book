@@ -1,55 +1,28 @@
 {
-  "extends": "eslint:recommended",
   "parserOptions": {
-    "ecmaVersion": 8,
-    "ecmaFeatures": {
-      "impliedStrict": true
-    },
+    "ecmaVersion": 9,
     "sourceType": "module"
   },
   "env": {
-    "browser": true,
-    "es6": true
+    "es6": true,
+    "node": true,
+    "jest": true
   },
-  "globals": {
-    "QUnit": false,
-    "firebase": false,
-    "firebaseui": false
-  },
+  "extends": [
+    "eslint:recommended"
+  ],
   "rules": {
-    "eqeqeq": [
-      "error",
-      "always"
-    ],
     "no-console": "warn",
     "indent": [
       "error",
       2,
       {
-        "SwitchCase": 1,
-        "ignoreComments": true
+        "SwitchCase": 1
       }
     ],
     "quotes": [
       "error",
-      "single",
-      {
-        "avoidEscape": true,
-        "allowTemplateLiterals": true
-      }
-    ],
-    "no-multi-spaces": [
-      "error",
-      {
-        "ignoreEOLComments": true
-      }
-    ],
-    "new-cap": "error",
-    "no-redeclare": [
-      "error",
-      {
-        "builtinGlobals": true
-      }
+      "single"
     ],
     "semi": [
       "error",
@@ -68,25 +41,29 @@
       "error",
       "never"
     ],
+    "eol-last": [
+      "error",
+      "always"
+    ],
     "keyword-spacing": [
       "error",
       {
         "before": true,
         "after": true,
         "overrides": {
-          "if": {
+          "do": {
             "after": false
           },
           "for": {
             "after": false
           },
-          "while": {
-            "after": false
-          },
-          "do": {
+          "if": {
             "after": false
           },
           "switch": {
+            "after": false
+          },
+          "while": {
             "after": false
           },
           "catch": {
